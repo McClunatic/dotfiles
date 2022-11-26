@@ -1,0 +1,5 @@
+[user]
+	email = bpmcclune@gmail.com
+	name = Brian McClune
+[alias]
+	adog = log --all --decorate --oneline --graph
