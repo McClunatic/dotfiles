@@ -26,5 +26,12 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# setup Rust 
+# set up Rust
 . "$HOME/.cargo/env"
+
+# set up Deno
+export DENO_INSTALL="/home/brian/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+# set up MicroK8s
+export PATH="$PATH:/snap/bin"
