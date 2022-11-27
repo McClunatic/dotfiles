@@ -10,3 +10,15 @@
 [submodule ".vim/pack/plugins/start/vim-surround"]
 	path = .vim/pack/plugins/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule ".vim/pack/plugins/opt/denops.vim"]
+	path = .vim/pack/plugins/opt/denops.vim
+	url = https://github.com/vim-denops/denops.vim
+[submodule ".vim/pack/plugins/opt/ddc.vim"]
+	path = .vim/pack/plugins/opt/ddc.vim
+	url = https://github.com/Shougo/ddc.vim
+[submodule ".vim/pack/plugins/opt/ddc-tabnine"]
+	path = .vim/pack/plugins/opt/ddc-tabnine
+	url = https://github.com/LumaKernel/ddc-tabnine.git
+[submodule ".vim/pack/plugins/opt/ddc-ui-native"]
+	path = .vim/pack/plugins/opt/ddc-ui-native
+	url = https://github.com/Shougo/ddc-ui-native.git
