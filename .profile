@@ -33,5 +33,8 @@ fi
 export DENO_INSTALL="/home/brian/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+# set up Go
+export PATH="$PATH:/usr/local/go/bin"
+
 # set up MicroK8s
 export PATH="$PATH:/snap/bin"
