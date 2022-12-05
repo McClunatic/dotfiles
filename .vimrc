@@ -26,4 +26,5 @@ set backspace=indent,eol,start	" Backspace behaviour
 
 "" Ale global options
 
-let g:ale_sign_warning = '•'
+let g:ale_sign_warning = '⚠'
+let g:ale_sign_error = '⤬'
