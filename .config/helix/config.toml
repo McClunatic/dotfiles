@@ -1,0 +1,7 @@
+theme = "tokyonight"
+
+[editor]
+default-line-ending = "lf"
+
+[editor.file-picker]
+hidden = false
