@@ -63,6 +63,6 @@ if ! shopt -oq posix; then
 fi
 
 # set up shell to use starship prompt (see https://starship.rs)
-if [ -f "$HOME/.local/bin/starship" ]; then
+if [ command -v starship &> /dev/null ]; then
   eval "$(starship init bash)"
 fi
