@@ -59,12 +59,15 @@ function dockerssh {
         -p "${HostPort}:10648" `
         --mount "type=volume,src=codes,dst=/home/${UserName}/codes" `
         $ImageName
+    # Change ownership of the volume to the user
+    docker exec --user root $ContainerName `
+        chown ${UserName}:${UserName} /home/${UserName}/codes
     # Add key to the container
     addkey -ContainerName $ContainerName
     # Delete any matching localhost entries in known_hosts
     ssh-keygen -q -R [localhost]:${HostPort}
     # Connect to running container
-    ssh -p $HostPort -o "StrictHostKeyChecking no" -Y ${UserName}@localhost
+    ssh -p $HostPort -o "StrictHostKeyChecking no" -A ${UserName}@localhost
 }
 
 # Function for managing dotfiles
