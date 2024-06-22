@@ -78,7 +78,7 @@ function dotfiles {
         [string[]] $Passthrough
     )
 
-    git --git-dir ${HOME}\.dotfiles --work-tree $HOME @Passthrough
+    git --git-dir ${HOME}\Codes\.dotfiles --work-tree $HOME @Passthrough
 }
 
 # Set up shell to use starship
