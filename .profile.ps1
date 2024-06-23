@@ -46,10 +46,12 @@ function dockerssh {
         [string] $ContainerName,
         [Parameter(Mandatory=$true, Position=1)]
         [string] $ImageName,
+        [Parameter(Mandatory=$true, Position=2)]
+        [string] $HomeVolumeName,
         [int] $HostPort = 10648,
-        [string] $MountVolume = "codes"
     )
 
+    # Get username from image naming convention: [username]-sshd
     $IsMatch = $ImageName -Match ".*/([a-zA-Z0-9\-]+)-sshd:.*"
     $UserName = $Matches[1]
 
@@ -57,11 +59,8 @@ function dockerssh {
     docker run -d --rm `
         --name $ContainerName `
         -p "${HostPort}:10648" `
-        --mount "type=volume,src=codes,dst=/home/${UserName}/codes" `
+        --mount "type=volume,src=${HomeVolumeName},dst=/home/${UserName}" `
         $ImageName
-    # Change ownership of the volume to the user
-    docker exec --user root $ContainerName `
-        chown ${UserName}:${UserName} /home/${UserName}/codes
     # Add key to the container
     addkey -ContainerName $ContainerName
     # Delete any matching localhost entries in known_hosts
@@ -78,7 +77,7 @@ function dotfiles {
         [string[]] $Passthrough
     )
 
-    git --git-dir ${HOME}\Codes\.dotfiles --work-tree $HOME @Passthrough
+    git --git-dir ${HOME}\.dotfiles --work-tree $HOME @Passthrough
 }
 
 # Set up shell to use starship
