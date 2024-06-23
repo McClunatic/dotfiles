@@ -48,7 +48,7 @@ function dockerssh {
         [string] $ImageName,
         [Parameter(Mandatory=$true, Position=2)]
         [string] $HomeVolumeName,
-        [int] $HostPort = 10648,
+        [int] $HostPort = 10648
     )
 
     # Get username from image naming convention: [username]-sshd
