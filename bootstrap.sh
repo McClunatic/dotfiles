@@ -8,7 +8,7 @@ fi
 
 # Checkout the dotfiles
 alias dotfiles='git --git-dir $HOME/.dotfiles --work-tree $HOME'
-dotfiles checkout
+dotfiles checkout 2> /dev/null
 if [[ $? -eq 1 ]]
 then
     # Back up conflicting dotfiles before retrying on error
