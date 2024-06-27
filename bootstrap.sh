@@ -15,9 +15,12 @@ then
     # Back up conflicting dotfiles before retrying on error
     echo 'encountered conflicts, backing up files in $HOME/.dotfiles-backup...'
     mkdir -p $HOME/.dotfiles-backup
-    git --git-dir $HOME/.dotfiles --work-tree $HOME checkout |& \
-        grep -E '^\s+' | awk '{print $1}' | cut -d/ -f1 | uniq | \
-        xargs -I{} mv {} $HOME/.dotfiles-backup/{} 
+    for conflict in $(git --git-dir $HOME/.dotfiles --work-tree $HOME checkout |& grep -E '^\s+' | awk '{print $1}')
+    do
+        conflict_dir=$(dirname conflict)
+        [[ $conflict_dir != . ]] && mkdir -p $HOME/.dotfiles-backup/$conflict_dir
+        mv $conflict $HOME/.dotfiles-backup/$conflict
+    done
     echo 'checking out dotfiles to $HOME...'
     git --git-dir $HOME/.dotfiles --work-tree $HOME checkout
 fi
