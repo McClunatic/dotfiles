@@ -17,7 +17,7 @@ then
     mkdir -p $HOME/.dotfiles-backup
     for conflict in $(git --git-dir $HOME/.dotfiles --work-tree $HOME checkout |& grep -E '^\s+' | awk '{print $1}')
     do
-        conflict_dir=$(dirname conflict)
+        conflict_dir=$(dirname $conflict)
         [[ $conflict_dir != . ]] && mkdir -p $HOME/.dotfiles-backup/$conflict_dir
         mv $conflict $HOME/.dotfiles-backup/$conflict
     done
