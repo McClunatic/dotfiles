@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Clone dotfiles repo
-if [[ ! -d $HOME/.dotfiles ]]
+if [[ ! -d $HOME/dotfiles ]]
 then
     echo 'cloning dotfiles repository to $HOME...'
     git clone git@github.com:McClunatic/dotfiles.git $HOME/dotfiles
