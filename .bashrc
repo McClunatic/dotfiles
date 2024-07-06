@@ -66,3 +66,8 @@ fi
 if command -v starship &> /dev/null ; then
   eval "$(starship init bash)"
 fi
+# set up shell to use fast node manager
+# (see: https://github.com/Schniz/fnm)
+if command -v fnm &> /dev/null ; then
+  eval "$(fnm env --use-on-cd)"
+fi

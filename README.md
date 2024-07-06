@@ -7,3 +7,4 @@ A repo of my dotfiles.
 * [Starship](https://starship.rs)
 * [Helix](https://helix-editor.com)
 * [Wezterm](https://wezfurlong.org/wezterm/index.html)
+* [Fast Node Manager](https://fnm.vercel.app)

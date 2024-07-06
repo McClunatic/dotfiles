@@ -85,3 +85,8 @@ if (Get-Command starship -errorAction SilentlyContinue)
 {
     Invoke-Expression (& starship init powershell)
 }
+
+if (Get-Command fnm -errorAction SilentlyContinue)
+{
+    fnm env --use-on-cd | Out-String | Invoke-Expression
+}
