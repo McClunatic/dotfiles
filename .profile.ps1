@@ -70,14 +70,14 @@ function dockerssh {
 }
 
 # Function for managing dotfiles
-function dotfiles {
+function dit {
 
     param (
         [Parameter(ValueFromRemainingArguments=$true)]
         [string[]] $Passthrough
     )
 
-    git --git-dir ${HOME}\.dotfiles --work-tree $HOME @Passthrough
+    git -c status.showUntrackedFiles=no --git-dir $HOME\dotfiles\.git --work-tree $HOME @Passthrough
 }
 
 # Set up shell to use starship
