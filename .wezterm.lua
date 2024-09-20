@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 -- Apply configuration changes
 config.color_scheme = 'Tokyo Night'
 config.enable_scroll_bar = false
-config.font_size = 12.0
+config.font_size = 11.0
 
 if string.find(wezterm.target_triple, 'windows') ~= nil then
   config.default_prog = { 'pwsh.exe' }
@@ -18,9 +18,9 @@ if string.find(wezterm.target_triple, 'windows') ~= nil then
         'pwsh.exe',
         '-NoExit',
         '-Command',
-        '& {Import-Module "C:\\Program Files (x86)\\' ..
-          'Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\Microsoft.VisualStudio.DevShell.dll"; ' ..
-          'Enter-VsDevShell bcd29cc6 -SkipAutomaticLocation -DevCmdArguments "-arch=arm64 -host_arch=x64"}'
+        '& {Import-Module "C:\\Program Files\\' ..
+          'Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\Microsoft.VisualStudio.DevShell.dll"; ' ..
+          'Enter-VsDevShell 0f00ccaf -SkipAutomaticLocation -DevCmdArguments "-arch=arm64 -host_arch=x64"}'
       }
     }
   }
