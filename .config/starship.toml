@@ -1,2 +1,5 @@
 # Disable newline between prompts
 add_newline = false
+
+[shell]
+disabled = false
