@@ -29,3 +29,15 @@ if (Get-Command fnm -errorAction SilentlyContinue)
 {
     fnm env --use-on-cd | Out-String | Invoke-Expression
 }
+
+# Set up completion for kubectl
+if (Get-Command kubectl -errorAction SilentlyContinue)
+{
+    kubectl completion powershell | Out-String | Invoke-Expression
+}
+
+# Set up completion for cmctl
+if (Get-Command cmctl -errorAction SilentlyContinue)
+{
+    cmctl completion powershell | Out-String | Invoke-Expression
+}
