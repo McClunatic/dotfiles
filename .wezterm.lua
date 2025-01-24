@@ -20,7 +20,7 @@ if string.find(wezterm.target_triple, 'windows') ~= nil then
         '-Command',
         '& {Import-Module "C:\\Program Files\\' ..
           'Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\Microsoft.VisualStudio.DevShell.dll"; ' ..
-          'Enter-VsDevShell 0f00ccaf -SkipAutomaticLocation -DevCmdArguments "-arch=arm64 -host_arch=x64"}'
+          'Enter-VsDevShell 0f00ccaf -SkipAutomaticLocation -DevCmdArguments "-arch=arm64 -host_arch=arm64"}'
       }
     }
   }
