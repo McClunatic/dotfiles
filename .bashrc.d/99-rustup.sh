@@ -1,4 +1,4 @@
 # source rustup .cargo/env if it exists
-if [ -d "$HOME/.cargo/env" ] ; then
+if [ -f "$HOME/.cargo/env" ] ; then
   . "$HOME/.cargo/env"
 fi
