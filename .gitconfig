@@ -5,5 +5,5 @@
 	autocrlf = input
 [alias]
 	adog = log --all --decorate --oneline --graph
-[credential "https://gitea.kubernetes.bri"]
-	provider = generic
+[include]
+    path = .gitcredentials/.gitconfig
