@@ -1,9 +1,6 @@
-[user]
-	email = brian.mcclune@proton.me
-	name = Brian McClune
 [core]
 	autocrlf = input
 [alias]
 	adog = log --all --decorate --oneline --graph
 [include]
-    path = .gitcredentials/.gitconfig
+    path = local.gitconfig
