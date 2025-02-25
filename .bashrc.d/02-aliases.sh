@@ -18,4 +18,4 @@ alias l='ls -CF'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # add alias for managing dotfiles
-alias dit='/usr/bin/git -c status.showUntrackedFiles=no --git-dir=$HOME/dotfiles/.git --work-tree=$HOME'
+alias dit='git -c status.showUntrackedFiles=no --git-dir=$HOME/dotfiles/.git --work-tree=$HOME'

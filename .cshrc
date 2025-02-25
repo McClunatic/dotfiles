@@ -1,5 +1,8 @@
 # ~/.cshrc: executed by csh(1) for non-login shells.
 
+# add alias for managing dotfiles
+alias dit 'git -c status.showUntrackedFiles=no --git-dir=$HOME/dotfiles/.git --work-tree=$HOME'
+
 # set the default editor
 which vim >& /dev/null
 if ( $status == 0 ) setenv EDITOR vim
