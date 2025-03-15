@@ -18,6 +18,11 @@ function dit {
     git -c status.showUntrackedFiles=no --git-dir $HOME\dotfiles\.git --work-tree $HOME @Passthrough
 }
 
+# Define function for window title
+function Invoke-Starship-PreCommand {
+  $host.ui.RawUI.WindowTitle = "$pwd"
+}
+
 # Set up shell to use starship
 if (Get-Command starship -errorAction SilentlyContinue)
 {
