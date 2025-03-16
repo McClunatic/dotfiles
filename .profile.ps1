@@ -46,3 +46,8 @@ if (Get-Command cmctl -errorAction SilentlyContinue)
 {
     cmctl completion powershell | Out-String | Invoke-Expression
 }
+
+# Set up environment modules
+if (Test-Path "$HOME\AppData\Local\EnvModules-5.5.0") {
+    . "$HOME\AppData\Local\EnvModules-5.5.0\init\pwsh.ps1"
+}
