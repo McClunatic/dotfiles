@@ -51,3 +51,9 @@ if (Get-Command cmctl -errorAction SilentlyContinue)
 if (Test-Path "$HOME\AppData\Local\EnvModules-5.5.0") {
     . "$HOME\AppData\Local\EnvModules-5.5.0\init\pwsh.ps1"
 }
+
+# Suppress errors with OCI
+if (Get-Command oci -errorAction SilentlyContinue)
+{
+    $env:OCI_CLI_SUPPRESS_FILE_PERMISSIONS_WARNING = "True"
+}
