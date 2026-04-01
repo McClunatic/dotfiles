@@ -1,0 +1,94 @@
+! ============================================================
+!  ~/.Xresources  —  apply with:  xrdb -merge ~/.Xresources
+! ============================================================
+
+
+! -- Font -------------------------------------------------
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+Xft.rgba:       rgb
+
+XTerm*faceName: DejaVu Sans Mono
+XTerm*faceSize: 11
+
+
+! -- Geometry ---------------------------------------------
+XTerm*geometry: 120x30+40+40
+
+
+! -- charClass --------------------------------------------
+! Makes double-click select whole paths, URLs, and flags.
+! - . / ~ are treated as part of a word, not word boundaries.
+XTerm*charClass: 45-47:48,126:48
+
+
+! -- Scrollback & performance -----------------------------
+XTerm*saveLines:  8192
+XTerm*jumpScroll: true
+XTerm*fastScroll: true
+
+
+! -- Bell -------------------------------------------------
+! Flash instead of beep (beep rarely works on VcXsrv anyway).
+! bellIsUrgent highlights the taskbar button on activity.
+XTerm*visualBell:   true
+XTerm*bellIsUrgent: true
+
+
+! -- Scrollbar --------------------------------------------
+XTerm*scrollBar: false
+
+
+! -- Bold & color rendering -------------------------------
+! Render bold as bright color variants (what most prompts expect).
+XTerm*boldMode:    true
+XTerm*colorBDMode: true
+XTerm*cursesBold:  true
+
+
+! -- Misc -------------------------------------------------
+XTerm*utf8:            2
+XTerm*altSendEscape:   true
+XTerm*metaSendsEscape: true
+
+
+! -- Dracula color scheme ---------------------------------
+XTerm*background:  #282a36
+XTerm*foreground:  #f8f8f2
+
+! Black / BrightBlack
+XTerm*color0:  #21222c
+XTerm*color8:  #6272a4
+
+! Red / BrightRed
+XTerm*color1:  #ff5555
+XTerm*color9:  #ff6e6e
+
+! Green / BrightGreen
+XTerm*color2:  #50fa7b
+XTerm*color10: #69ff94
+
+! Yellow / BrightYellow
+XTerm*color3:  #f1fa8c
+XTerm*color11: #ffffa5
+
+! Blue / BrightBlue
+XTerm*color4:  #bd93f9
+XTerm*color12: #d6acff
+
+! Magenta / BrightMagenta
+XTerm*color5:  #ff79c6
+XTerm*color13: #ff92df
+
+! Cyan / BrightCyan
+XTerm*color6:  #8be9fd
+XTerm*color14: #a4ffff
+
+! White / BrightWhite
+XTerm*color7:  #f8f8f2
+XTerm*color15: #ffffff
+
+! Cursor
+XTerm*cursorColor: #f8f8f2
